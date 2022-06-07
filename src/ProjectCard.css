@@ -1,0 +1,53 @@
+.ProjectCard {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "cardImage cardTitle cardTitle"
+        "cardDescription cardDescription cardDescription"
+        "specificationLink launchApp launchSource";
+
+    width: 100%;
+    
+}
+
+.cardImage {
+    grid-area: cardImage;
+    margin: auto;
+    height: 100px;
+
+}
+
+.cardTitle {
+    grid-area: cardTitle;
+    text-align: Left;
+    margin: auto 0;
+    
+}
+
+.cardDescription {
+    grid-area: cardDescription;
+    margin: 0 20px;
+}
+
+.launchApp {
+    grid-area: launchApp;
+}
+
+.launchSource {
+    grid-area: launchSource;
+}
+
+.specification {
+    grid-area: specificationLink
+}
+
+button {
+    background-color: #40C8FF;
+    border: none;
+    border-radius: 20px;
+    margin: 20px;
+
+}
