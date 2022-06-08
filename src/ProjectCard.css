@@ -8,7 +8,8 @@
         "cardImage cardTitle cardTitle"
         "cardDescription cardDescription cardDescription"
         "specificationLink launchApp launchSource";
-
+    
+        grid-template-rows: repeat(3, 100px);
     width: 100%;
     
 }
@@ -16,8 +17,8 @@
 .cardImage {
     grid-area: cardImage;
     margin: auto;
-    height: 100px;
-
+    /* height: 100px; */
+    
 }
 
 .cardTitle {
