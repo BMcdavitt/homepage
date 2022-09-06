@@ -13,8 +13,23 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">Work Samples</header>
+      <div className="App-AboutBody">
+        <h2>
+          Hello, my name is <span className="aboutName">Bill McDavitt.</span>
+        </h2>
+        <h2>I'm a full-stack web developer.</h2>
+        <h2>
+          <a class="aboutWorkLink" href="#App-header">
+            Here is some of my work
+            <i class="fa-solid fa-arrow-right" />
+          </a>
+        </h2>
+      </div>
+
       <div className="App-body">
+        <header className="App-header" id="App-header">
+          Work Samples
+        </header>
         <div className="cardHolder">
           <ProjectCard
             name="BoostX"

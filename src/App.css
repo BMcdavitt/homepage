@@ -1,10 +1,12 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  background-color: #E6F5F8;
+
 }
 
 .App-header {
   background-color: #282c34;
-  //min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,15 +15,42 @@
   color: white;
 }
 
-.App-body {
-  background-color: #E6F5F8;
+.aboutName {
+  color: #0077b6;
+}
 
+.aboutWorkLink {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 15px;
+}
+
+.aboutWorkLink:hover {
+  color: #0077b6;
+  cursor: pointer;
 }
 
 .App-link {
   background-color: #61dafb;
 }
 /* add Media Query to make 1 column on phone displays */
+
+.App-AboutBody{
+  height: 100vh;
+  margin: 0 ;
+  color: white;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  font-size: calc(10px + 2vmin);
+}
+
+h2 {
+  margin: 0;
+}
 
 .cardHolder {
   display: grid;
@@ -30,6 +59,10 @@
 
   gap: 10px;
   padding: 10px 40px;
+}
+
+.App-body{
+  height: 100vh;
 }
 
 @media screen and (min-width: 760px){
