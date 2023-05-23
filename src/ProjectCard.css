@@ -1,54 +1,61 @@
 .ProjectCard {
-    background-color: #FFFFFF;
-    border-radius: 20px;
+  background-color: #ffffff;
+  border-radius: 1.25rem;
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-        "cardImage cardTitle cardTitle"
-        "cardDescription cardDescription cardDescription"
-        "specificationLink launchApp launchSource";
-    
-        grid-template-rows: repeat(3, 100px);
-    width: 100%;
-    
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    'cardImage cardTitle cardTitle'
+    'cardDescription cardDescription cardDescription'
+    'specificationLink launchApp launchSource';
+
+  grid-template-rows: repeat(3, 6.25rem);
+  width: 100%;
+
+  box-shadow: 0.3125rem 0.3125rem 0.5rem #0000004d;
 }
 
 .cardImage {
-    grid-area: cardImage;
-    margin: auto;
-    /* height: 100px; */
-    
+  grid-area: cardImage;
+  margin: auto;
+  /* height: 6.25rem; */
 }
 
 .cardTitle {
-    grid-area: cardTitle;
-    text-align: Left;
-    margin: auto 0;
-    
+  grid-area: cardTitle;
+  text-align: Left;
+  margin: auto 0;
+  padding-left: 1.25rem;
 }
 
 .cardDescription {
-    grid-area: cardDescription;
-    margin: 0 20px;
+  grid-area: cardDescription;
+  margin: 0 1.25rem;
 }
 
 .launchApp {
-    grid-area: launchApp;
+  grid-area: launchApp;
 }
 
 .launchSource {
-    grid-area: launchSource;
+  grid-area: launchSource;
 }
 
 .specification {
-    grid-area: specificationLink
+  grid-area: specificationLink;
 }
 
 button {
-    background-color: #40C8FF;
-    border: none;
-    border-radius: 20px;
-    margin: 20px;
+  background-image: linear-gradient(#40c8ff, #5ee4ee);
+  border: none;
+  border-radius: 1.25rem;
+  margin: 1.25rem;
+  transition: transform .25s;
 
+  box-shadow: 0.1875rem 0.1875rem 0.25rem #0000004d;
+}
+
+button:hover {
+  transform: scale(1.09);
+  cursor: pointer;
 }

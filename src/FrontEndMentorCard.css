@@ -1,0 +1,29 @@
+.FrontEndMentorCard {
+    border: 1px solid #dbe5e6;
+    background-color: #fff;
+    border-radius: 0.9375rem;
+    overflow: hidden;
+    height: 21.875rem;
+
+    box-shadow: 0.3125rem 0.3125rem 0.5rem #0000004d;
+}
+
+.FrontEndMentorImage {
+max-width: 100%;
+transition: transform 1s;
+
+}
+
+.FrontEndMentorImage:hover {
+    transform: scale(1.09);
+    cursor: pointer;
+}
+
+.FrontEndMentorCardHeader {
+    transition: transform 1s;
+}
+
+.FrontEndMentorCardHeader:hover {
+    cursor: pointer;
+    transform: scale(1.09);
+}

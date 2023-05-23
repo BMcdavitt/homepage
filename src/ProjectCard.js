@@ -8,11 +8,11 @@ function ProjectCard(props) {
     return (
         <div className="ProjectCard">
             <img className="cardImage" src={"./images/" + props.image} alt=""></img>
-            <h2 className="cardTitle">{props.name}</h2>
+            <h3 className="cardTitle">{props.name}</h3>
             <p className="cardDescription">{props.description}</p>
             {specificationButton(props)}
             <button className="launchApp" onClick={() => launchApp(props.link)}>Launch Project</button>
-            <button className="launchSource" onClick={() => launchApp(props.source)}>View Source on Github</button>
+            <button className="launchSource" onClick={() => launchApp(props.source)}>View Source</button>
             
         </div>
     )

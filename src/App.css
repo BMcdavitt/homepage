@@ -1,8 +1,20 @@
+h1 {
+  margin: 0;
+  z-index: 10;
+
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2rem;
+  z-index: 10;
+}
+
 .App {
   text-align: center;
-  min-height: 100vh;
-  background-color: #E6F5F8;
-
+  /* min-height: 100vh; */
+  background-color: #e6f5f8;
 }
 
 .App-header {
@@ -11,8 +23,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(0.625rem + 2vmin);
+  color: #fff;
+  z-index: 1;
+}
+
+.sticky + .App-body {
+  margin-top: 2.1875rem;
 }
 
 .aboutName {
@@ -23,57 +40,303 @@
   display: flex;
   justify-content: center;
   align-items: baseline;
-  gap: 15px;
+  gap: 0.9375rem;
+
+  animation-name: uncolorMe;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .aboutWorkLink:hover {
-  color: #0077b6;
   cursor: pointer;
+
+  animation-name: colorMe;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .App-link {
   background-color: #61dafb;
 }
-/* add Media Query to make 1 column on phone displays */
 
-.App-AboutBody{
+.App-AboutBody {
   height: 100vh;
-  margin: 0 ;
+  margin: 0;
   color: white;
   background-color: #282c34;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  font-size: calc(10px + 2vmin);
-}
+  font-size: calc(0.625rem + 2vmin);
 
-h2 {
-  margin: 0;
+  flex-basis: 3.125rem;
+
+  overflow: hidden;
 }
 
 .cardHolder {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-auto-rows: minmax(250px, auto);
+  grid-auto-rows: minmax(15.625rem, auto);
 
-  gap: 10px;
-  padding: 10px 40px;
+  gap: 0.625rem;
+  padding: 0.625rem 2.5rem;
 }
 
-.App-body{
+.App-body {
   height: 100vh;
 }
 
-@media screen and (min-width: 760px){
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
+.penIframe {
+  height: 31.25rem;
+  width: 25rem;
+  justify-self: center;
+}
+
+@keyframes circle1 {
+  0% {
+    width: 0rem;
+    height: 0rem;
+    left: 0rem;
+    top: 0rem;
+    opacity: 0;
+  }
+
+  100% {
+    width: 90rem;
+    height: 90rem;
+    left: -45rem;
+    top: -45rem;
+    opacity: 1;
+  }
+}
+
+@keyframes circle2 {
+  10% {
+    width: 0rem;
+    height: 0rem;
+    left: 0rem;
+    top: 0rem;
+    opacity: 0;
+  }
+
+  100% {
+    width: 80rem;
+    height: 80rem;
+    left: -40rem;
+    top: -40rem;
+    opacity: 1;
+  }
+}
+
+@keyframes circle3 {
+  20% {
+    width: 0rem;
+    height: 0rem;
+    left: 0rem;
+    top: 0rem;
+    opacity: 0;
+  }
+
+  100% {
+    width: 70rem;
+    height: 70rem;
+    left: -35rem;
+    top: -35rem;
+    opacity: 1;
+  }
+}
+
+@keyframes circle4 {
+  30% {
+    width: 0rem;
+    height: 0rem;
+    left: 0rem;
+    top: 0rem;
+    opacity: 0;
+  }
+
+  100% {
+    width: 60rem;
+    height: 60rem;
+    left: -30rem;
+    top: -30rem;
+    opacity: 1;
+  }
+}
+
+@keyframes colorMe {
+  0% {
+    color: #fff;
+  }
+  100% {
+    color: #0077b6;
+  }
+}
+
+@keyframes uncolorMe {
+  0% {
+    color: #0077b6;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 47.5rem) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  @keyframes circle1 {
+    0% {
+      width: 0rem;
+      height: 0rem;
+      left: 0rem;
+      top: 0rem;
+      opacity: 0;
+    }
+
+    100% {
+      width: 45rem;
+      height: 45rem;
+      left: -22.5rem;
+      top: -22.5rem;
+      opacity: 1;
+    }
+  }
+
+  @keyframes circle2 {
+    10% {
+      width: 0rem;
+      height: 0rem;
+      left: 0rem;
+      top: 0rem;
+      opacity: 0;
+    }
+
+    100% {
+      width: 35rem;
+      height: 35rem;
+      left: -17.5rem;
+      top: -17.5rem;
+      opacity: 1;
+    }
+  }
+
+  @keyframes circle3 {
+    20% {
+      width: 0rem;
+      height: 0rem;
+      left: 0rem;
+      top: 0rem;
+      opacity: 0;
+    }
+
+    100% {
+      width: 25rem;
+      height: 25rem;
+      left: -12.5rem;
+      top: -12.5rem;
+      opacity: 1;
+    }
+  }
+
+  @keyframes circle4 {
+    30% {
+      width: 0rem;
+      height: 0rem;
+      left: 0rem;
+      top: 0rem;
+      opacity: 0;
+    }
+
+    100% {
+      width: 15rem;
+      height: 15rem;
+      left: -7.5rem;
+      top: -7.5rem;
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 47.5rem) {
   .cardHolder {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(250px, auto);
+    grid-auto-rows: minmax(15.625rem, auto);
 
-    gap: 30px;
-    padding: 10px 40px;
-
+    gap: 1.875rem;
+    padding: 0.625rem 2.5rem;
   }
+}
+.circle1 {
+  position: absolute;
+  background-color: #494e58;
+
+  border-radius: 50%;
+
+  left: -3.125rem;
+  top: -3.125rem;
+
+  animation-name: circle1;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+
+  z-index: 0;
+}
+
+.circle2 {
+  position: absolute;
+  background-color: #1e325c;
+
+  border-radius: 50%;
+
+  animation-name: circle2;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+
+  z-index: 1;
+}
+
+.circle3 {
+  position: absolute;
+  background-color: #2e4c8d;
+
+  border-radius: 50%;
+
+  animation-name: circle3;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+
+  z-index: 2;
+}
+
+.circle4 {
+  position: absolute;
+  background-color: #6d84b1;
+
+  border-radius: 50%;
+
+  animation-name: circle4;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+
+  z-index: 3;
 }
