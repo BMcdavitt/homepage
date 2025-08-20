@@ -3,20 +3,18 @@ const pageData = [
     cardType: 'ProjectCard',
     cardData: [
       {
+        name: 'Moosiko',
+        image: 'moosiko.png',
+        description: 'A full featured Music Education Platform written in React with an Express.js backend.',
+        link: 'https://my.moosiko.com/',
+      },
+      {
         name: 'Drawing Tool',
         image: 'konva.png',
         description:
           'This project uses the Konva library to create a simple drawing tool.  This implements both mouse and touch support.',
         link: 'https://bmcdavitt.github.io/annotator/',
         source: 'https://github.com/BMcdavitt/annotator',
-      },
-      {
-        name: 'Quizzical',
-        image: 'quizzical.png',
-        description:
-          'A simple quiz game.  This project makes use of the Open Trivia Database RestfulAPI ',
-        link: 'https://bmcdavitt.github.io/reactQuiz/',
-        source: 'https://github.com/BMcdavitt/reactQuiz/tree/master/src',
       },
       {
         name: 'Greener Landscapes',
@@ -65,7 +63,7 @@ const pageData = [
         title: 'Intro Section with Dropdown Menu',
         link: 'https://bmcdavitt.github.io/femIntroSectionWithDropdown/',
       },
-      
+
       {
         name: 'TestimonialsGrid',
         image: 'TestimonialsGrid.png',
@@ -209,12 +207,12 @@ const pageData = [
   {
     cardType: 'OneHundredDayCssCard',
     cardData: [
-      // Radio Select 
-      { src: 'QWxJYbL'},
+      // Radio Select
+      { src: 'QWxJYbL' },
       // Sproing
-      { src: 'qBKYbag'},
+      { src: 'qBKYbag' },
       // Penrose Triangle
-      { src: 'QWxaNQb'},
+      { src: 'QWxaNQb' },
       // Transforming Shapes
       // { src: 'OJEjzrK' },
       // File Upload
