@@ -5,30 +5,36 @@ import React from "react";
 function ProjectCard(props) {
 
 
-    return (
-        <div className="ProjectCard">
-            <img className="cardImage" src={"./images/" + props.image} alt=""></img>
-            <h3 className="cardTitle">{props.name}</h3>
-            <p className="cardDescription">{props.description}</p>
-            {specificationButton(props)}
-            <button className="launchApp" onClick={() => launchApp(props.link)}>Launch Project</button>
-            <button className="launchSource" onClick={() => launchApp(props.source)}>View Source</button>
-            
-        </div>
-    )
+  return (
+    <div className="ProjectCard">
+      <img className="cardImage" src={"./images/" + props.image} alt=""></img>
+      <h3 className="cardTitle">{props.name}</h3>
+      <p className="cardDescription">{props.description}</p>
+      {specificationButton(props)}
+      <button className="launchApp" onClick={() => launchApp(props.link)}>Launch Project</button>
+      {launchSourceButton(props)}
+
+    </div>
+  )
 }
 
 function launchApp(link) {
-    window.open(link)
+  window.open(link)
 }
 
-function specificationButton(props)
-{
-    // return <button className="specification">{props.specificatonText}</button>
-    if(props.specification) {
-        return <button className="specification" onClick={() => launchApp(props.specification)}>{props.specificationText}</button>
-    }
+function specificationButton(props) {
+  // return <button className="specification">{props.specificatonText}</button>
+  if (props.specification) {
+    return <button className="specification" onClick={() => launchApp(props.specification)}>{props.specificationText}</button>
+  }
 
 }
 
-export default ProjectCard  
+function launchSourceButton(props) {
+  if (props.source) {
+    return <button className="launchSource" onClick={() => launchApp(props.source)}>View Source</button>
+  }
+}
+
+
+export default ProjectCard
